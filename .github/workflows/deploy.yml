@@ -22,6 +22,14 @@ jobs:
           node-version: 22
           cache: npm # o pnpm / yarn
 
+      - name: Actualización de npm
+        run: npm install -g npm@latest
+
+      - name: Limpieza de bibliotecas
+        run: |
+          rm -rf node_modules
+          rm -f package-lock.json
+
       - name: Instalación de dependencias
         run: npm ci
 
