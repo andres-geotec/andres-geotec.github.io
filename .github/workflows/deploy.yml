@@ -31,7 +31,7 @@ jobs:
           rm -f package-lock.json
 
       - name: Instalación de dependencias
-        run: npm ci
+        run: npm install
 
       - name: Construcción
         run: npm run build
