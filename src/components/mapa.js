@@ -2,6 +2,9 @@ import { Map, TerrainControl } from 'maplibre-gl'
 
 export default function (container) {
   const map = new Map({
+    attributionControl: {
+      compact: false,
+    },
     center: [11.39085, 47.27574],
     container,
     maxZoom: 18,
@@ -56,7 +59,7 @@ export default function (container) {
   function rotateCamera(timestamp) {
     // clamp the rotation between 0 -360 degrees
     // Divide timestamp by 100 to slow rotation to ~10 degrees / sec
-    map.rotateTo((timestamp / 250) % 360, { duration: 0 })
+    map.rotateTo((timestamp / 400) % 360, { duration: 0 })
     // Request the next frame of the animation.
     requestAnimationFrame(rotateCamera)
   }

@@ -3,7 +3,9 @@ import { RouterView } from 'vue-router'
 </script>
 
 <template>
-  <!-- <SisdaiNavegacionPrincipal> ...contenido </SisdaiNavegacionPrincipal> -->
+  <SisdaiNavegacionPrincipal>
+    <template #identidad> andres-geotec </template>
+  </SisdaiNavegacionPrincipal>
 
   <RouterView />
 </template>

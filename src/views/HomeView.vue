@@ -17,7 +17,15 @@ onMounted(() => mapa('map'))
     </div>
   </div>
 
-  <!-- <main>:)</main> -->
+  <main class="contenedor m-y-maximo">
+    <section class="ancho-lectura">
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores quo fugit laborum corrupti
+        corporis mollitia! Non beatae officiis qui, omnis voluptatibus et porro commodi quae
+        quisquam distinctio nihil sit alias?
+      </p>
+    </section>
+  </main>
 </template>
 
 <style lang="scss">
