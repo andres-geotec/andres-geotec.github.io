@@ -1,16 +1,9 @@
 <script setup>
-import { Map } from 'maplibre-gl'
+import mapa from '@/components/mapa'
 import 'maplibre-gl/dist/maplibre-gl.css'
 import { onMounted } from 'vue'
 
-onMounted(() => {
-  new Map({
-    container: 'map',
-    style: 'https://demotiles.maplibre.org/style.json',
-    center: [0, 0],
-    zoom: 1,
-  })
-})
+onMounted(() => mapa('map'))
 </script>
 
 <template>
@@ -23,13 +16,21 @@ onMounted(() => {
       </div>
     </div>
   </div>
-  <!-- <main>:)</main> -->
 
-  <!-- <div id="map"></div> -->
+  <!-- <main>:)</main> -->
 </template>
 
 <style lang="scss">
 #map {
   height: 100%;
+
+  &.maplibregl-map
+    .maplibregl-control-container
+    .maplibregl-ctrl-bottom-right
+    .maplibregl-ctrl.maplibregl-ctrl-attrib.maplibregl-compact
+    .maplibregl-ctrl-attrib-button {
+    margin: 0 !important;
+    padding: 0 !important;
+  }
 }
 </style>
